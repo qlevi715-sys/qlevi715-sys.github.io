@@ -1,5 +1,8 @@
 ##  Demo en línea
-https://qlevi715-sys.github.io/Pagina---TecnoNova/
+https://qlevi715-sys.github.io/Web---TecnoNova/
+
+##  Trabajo hecho por:
+Olmert Levi Quintanilla Hernandez Codigo: U20251038
 
 ##  Tecnologías utilizadas
 - HTML5
