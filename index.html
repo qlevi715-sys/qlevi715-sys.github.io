@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TecnoNova - Tecnología de calidad a los mejores precios. Envíos a todo el país.">
+    <meta name="keywords" content="tecnología, electrónica, productos innovadores, mejores precios">
+    <title>TecnoNova - Tecnología que Transforma</title>
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/input.css">
+
+</head>
+
+<body class="bg-gray-50">
+    
+    <!-- ========== HEADER - NAVEGACIÓN ========== -->
+    <header>
+        <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50" role="navigation" aria-label="Navegación principal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent" aria-label="TecnoNova - Inicio">
+                            TecnoNova
+                        </a>
+                    </div>
+                    
+                    <!-- Navegación Desktop -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-blue-600 font-semibold" aria-current="page">Inicio</a>
+                        <a href="pages/productos.html" class="text-gray-700 hover:text-blue-600 transition-colors">Productos</a>
+                        <a href="pages/carrito.html" class="text-gray-700 hover:text-blue-600 transition-colors">Carrito</a>
+                        <button id="btnComenzar" 
+                            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            Comenzar
+                        </button>
+                    </div>
+                    
+                    <!-- Botón Menú Mobile -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Abrir menú" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menú Mobile -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+                <div class="px-4 py-3 space-y-3">
+                    <a href="index.html" class="block py-2 text-blue-600 font-semibold" aria-current="page">Inicio</a>
+                    <a href="pages/productos.html" class="block py-2 text-gray-700 hover:text-blue-600">Productos</a>
+                    <a href="pages/carrito.html" class="block py-2 text-gray-700 hover:text-blue-600">Carrito</a>
+                    <button id="btnComenzar" 
+                            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            Comenzar
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        
+        <!-- ========== HERO SECTION ========== -->
+        <section class="relative min-h-screen flex items-center" aria-labelledby="hero-heading">
+            <!-- Imagen de fondo -->
+            <div class="absolute inset-0">
+                <img 
+                    src="assets/imagenes/home.jpg"
+                    alt="Productos tecnológicos destacados de TecnoNova"
+                    class="w-full h-full object-cover"
+                >
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-200/30" aria-hidden="true"></div>
+            </div>
+
+            <!-- Contenido Hero -->
+            <div class="relative z-10 w-full px-8 sm:px-12 lg:px-20">
+                <div class="max-w-xl text-left">
+                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+                        Mejores Precios
+                    </span>
+
+                    <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Súper precios
+                        <span class="block bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                            en tus artículos favoritos
+                        </span>
+                    </h1>
+
+                    <p class="text-xl text-gray-700 mb-8">
+                        Gana más por tu dinero con productos innovadores y lo último en tecnología.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-start">
+                        <a href="pages/productos.html" 
+                           class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 hover:scale-105 transition"
+                           aria-label="Ver productos disponibles">
+                            Comprar ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CARACTERÍSTICAS ========== -->
+        <section class="py-20 bg-white" aria-labelledby="features-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 id="features-heading" class="text-4xl font-bold text-gray-900 mb-4">¿Por qué elegirnos?</h2>
+                    <p class="text-xl text-gray-600">Características que nos hacen únicos</p>
+                </header>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="p-6 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all group">
+                        <div class="text-blue-600 text-4xl mb-4 transform group-hover:scale-110 transition-transform" aria-hidden="true">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ultra Rápido</h3>
+                        <p class="text-gray-600">Rendimiento optimizado</p>
+                    </article>
+
+                    <article class="p-6 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all group">
+                        <div class="text-blue-500 text-4xl mb-4 transform group-hover:scale-110 transition-transform" aria-hidden="true">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Seguro</h3>
+                        <p class="text-gray-600">Protección de sus datos personales</p>
+                    </article>
+
+                    <article class="p-6 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all group">
+                        <div class="text-blue-500 text-4xl mb-4 transform group-hover:scale-110 transition-transform" aria-hidden="true">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Experiencia Premium</h3>
+                        <p class="text-gray-600">Diseñada para usuarios exigentes.</p>
+                    </article>
+
+                    <article class="p-6 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all group">
+                        <div class="text-blue-500 text-4xl mb-4 transform group-hover:scale-110 transition-transform" aria-hidden="true">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">24/7 Soporte</h3>
+                        <p class="text-gray-600">Asistencia cuando la necesites</p>
+                    </article>
+
+                    <article class="p-6 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all group">
+                        <div class="text-blue-500 text-4xl mb-4 transform group-hover:scale-110 transition-transform" aria-hidden="true">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Premium</h3>
+                        <p class="text-gray-600">Calidad de los productos garantizada</p>
+                    </article>
+
+                    <article class="p-6 rounded-xl border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all group">
+                        <div class="text-blue-500 text-4xl mb-4 transform group-hover:scale-110 transition-transform" aria-hidden="true">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fácil de Usar</h3>
+                        <p class="text-gray-600">Interfaz intuitiva y amigable</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== MEMBRESÍAS Y PRECIOS ========== -->
+        <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50" aria-labelledby="pricing-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 id="pricing-heading" class="text-4xl font-bold text-gray-900 mb-4">Membresías y Beneficios</h2>
+                    <p class="text-xl text-gray-600">Ahorra más y obtén ventajas exclusivas en productos electrónicos</p>
+                </header>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Plan Básico -->
+                    <article class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:shadow-xl transition-all">
+                        <h3 class="text-2xl font-bold mb-2">Básico</h3>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold">$5</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>3% de descuento en compras</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>Garantía extendida 6 meses</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>Novedades antes que todos</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>15% de descuento en envío</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>Soporte básico</span>
+                            </li>
+                        </ul>
+                        <button onclick="obtenerPlan('Básico')" 
+                                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+                                aria-label="Obtener plan Básico">
+                            Obtener Plan
+                        </button>
+                    </article>
+
+                    <!-- Plan Pro -->
+                    <article class="relative bg-blue-600 text-white p-8 rounded-2xl scale-105 shadow-2xl">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
+                            MÁS POPULAR
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold">$15</span>
+                            <span class="text-blue-100">/mes</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-blue-200" aria-hidden="true"></i>
+                                <span>10% de descuento en productos</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-blue-200" aria-hidden="true"></i>
+                                <span>Envío gratis ilimitado</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-blue-200" aria-hidden="true"></i>
+                                <span>Garantía extendida 12 meses</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-blue-200" aria-hidden="true"></i>
+                                <span>Acceso a preventas exclusivas</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-blue-200" aria-hidden="true"></i>
+                                <span>Soporte técnico prioritario</span>
+                            </li>
+                        </ul>
+                        <button onclick="obtenerPlan('Pro')" 
+                                class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all"
+                                aria-label="Obtener plan Pro">
+                            Obtener Plan
+                        </button>
+                    </article>
+
+                    <!-- Plan VIP -->
+                    <article class="bg-white p-8 rounded-2xl border-2 border-gray-200 hover:shadow-xl transition-all">
+                        <h3 class="text-2xl font-bold mb-2">VIP</h3>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold">$49</span>
+                            <span class="text-gray-600">/mes</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>15% de descuento por mayoreo</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>Soporte técnico 24/7</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>Acceso API para sistemas de inventario</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>Envíos programados</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-green-500" aria-hidden="true"></i>
+                                <span>Garantía extendida 24 meses</span>
+                            </li>
+                        </ul>
+                        <button onclick="obtenerPlan('VIP')" 
+                                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+                                aria-label="Obtener plan VIP">
+                            Obtener Plan
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Reseñas ========== -->
+        <section class="py-20 bg-white" aria-labelledby="testimonials-heading">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 id="testimonials-heading" class="text-4xl font-bold text-gray-900 mb-4">Reseñas de nuestros clientes</h2>
+                </header>
+
+                <div class="relative">
+                    <article id="testimonial-container" class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
+                        <div class="flex flex-col items-center text-center">
+                            <!-- Imagen -->
+                            <img id="testimonial-image" 
+                                src="assets/imagenes/cliente1.png"
+                                alt="Foto de cliente"
+                                class="w-24 h-24 rounded-full mb-4 border-4 border-white shadow-lg object-cover" />
+
+                            <!-- Estrellas -->
+                            <div id="testimonial-stars" class="flex justify-center text-yellow-400 text-2xl mb-3" role="img" aria-label="Calificación">
+                                <!-- Se llenan con JS -->
+                            </div>
+
+                            <!-- Texto -->
+                            <blockquote>
+                                <p id="testimonial-text" class="text-xl text-gray-700 mb-6 italic">
+                                    "Excelente calidad de productos"
+                                </p>
+                            </blockquote>
+
+                            <!-- Nombre -->
+                            <h3 id="testimonial-name" class="font-bold text-gray-900">Olivia Romero</h3>
+
+                            <!-- Cargo -->
+                            <p id="testimonial-role" class="text-gray-600">Cliente frecuente</p>
+                        </div>
+                    </article>
+
+                    <!-- Controles de navegación -->
+                    <nav class="flex justify-center gap-4 mt-6" aria-label="Navegación de testimonios">
+                        <button id="prev-testimonial"
+                                class="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700"
+                                aria-label="Testimonio anterior">
+                            <i class="fas fa-chevron-left text-xl" aria-hidden="true"></i>
+                        </button>
+                        <button id="next-testimonial"
+                                class="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700"
+                                aria-label="Siguiente testimonio">
+                            <i class="fas fa-chevron-right text-xl" aria-hidden="true"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section class="py-20 bg-gray-50" aria-labelledby="faq-heading">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-16">
+                    <h2 id="faq-heading" class="text-4xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+                </header>
+
+                <div class="space-y-4">
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <h3>
+                            <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                    aria-expanded="false"
+                                    aria-controls="faq-1">
+                                <span class="font-semibold text-gray-900">¿Hacen envíos a todo el país?</span>
+                                <i class="fas fa-chevron-down transition-transform" aria-hidden="true"></i>
+                            </button>
+                        </h3>
+                        <div id="faq-1" class="faq-content hidden px-6 pb-6 text-gray-600">
+                            Sí, hacemos envíos a todo el país.
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <h3>
+                            <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                    aria-expanded="false"
+                                    aria-controls="faq-2">
+                                <span class="font-semibold text-gray-900">¿Puedo cambiar de plan después?</span>
+                                <i class="fas fa-chevron-down transition-transform" aria-hidden="true"></i>
+                            </button>
+                        </h3>
+                        <div id="faq-2" class="faq-content hidden px-6 pb-6 text-gray-600">
+                            Sí, puedes cambiar de plan en cualquier momento.
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <h3>
+                            <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                    aria-expanded="false"
+                                    aria-controls="faq-3">
+                                <span class="font-semibold text-gray-900">¿Qué métodos de pago aceptan?</span>
+                                <i class="fas fa-chevron-down transition-transform" aria-hidden="true"></i>
+                            </button>
+                        </h3>
+                        <div id="faq-3" class="faq-content hidden px-6 pb-6 text-gray-600">
+                            Aceptamos tarjetas de crédito, débito, PayPal y efectivo.
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <h3>
+                            <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                    aria-expanded="false"
+                                    aria-controls="faq-4">
+                                <span class="font-semibold text-gray-900">¿Puedo pagar contra entrega?</span>
+                                <i class="fas fa-chevron-down transition-transform" aria-hidden="true"></i>
+                            </button>
+                        </h3>
+                        <div id="faq-4" class="faq-content hidden px-6 pb-6 text-gray-600">
+                            Sí, se puede.
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <h3>
+                            <button class="faq-btn w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" 
+                                    aria-expanded="false"
+                                    aria-controls="faq-5">
+                                <span class="font-semibold text-gray-900">¿Ofrecen garantía de devolución?</span>
+                                <i class="fas fa-chevron-down transition-transform" aria-hidden="true"></i>
+                            </button>
+                        </h3>
+                        <div id="faq-5" class="faq-content hidden px-6 pb-6 text-gray-600">
+                            Sí, garantía de 30 días.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+   <!-- ========== FOOTER ========== -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Grid Principal -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <!-- Logo y descripción -->
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    TecnoNova
+                </h3>
+                <p class="text-gray-400">Innovación que impulsa tu éxito</p>
+            </div>
+
+            <!-- Productos -->
+            <nav aria-label="Enlaces de productos" class="text-center md:text-left">
+                <h4 class="font-bold mb-4 text-white">Productos</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Demo</a></li>
+                </ul>
+            </nav>
+
+            <!-- Empresa -->
+            <nav aria-label="Enlaces de empresa" class="text-center md:text-left">
+                <h4 class="font-bold mb-4 text-white">Empresa</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                </ul>
+            </nav>
+
+            <!-- Soporte -->
+            <nav aria-label="Enlaces de soporte" class="text-center md:text-left">
+                <h4 class="font-bold mb-4 text-white">Soporte</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Ayuda</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Redes Sociales -->
+        <nav aria-label="Redes sociales" class="flex justify-center space-x-8 mb-8 py-6 border-t border-gray-800">
+            <a href="#" class="text-gray-400 hover:text-white hover:scale-110 text-2xl transition-all" aria-label="Facebook">
+                <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white hover:scale-110 text-2xl transition-all" aria-label="Instagram">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white hover:scale-110 text-2xl transition-all" aria-label="YouTube">
+                <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white hover:scale-110 text-2xl transition-all" aria-label="Twitter">
+                <i class="bi bi-twitter-x" aria-hidden="true"></i>
+            </a>
+        </nav>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+            <p>&copy; 2024 TecnoNova. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Notificación Toast -->
+    <div id="toast" 
+         class="hidden fixed bottom-5 right-5 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg"
+         role="status"
+         aria-live="polite">
+        Plan obtenido
+    </div>
+
+    <!-- Modal de registro -->
+<div id="modalRegistro" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-8 rounded-xl w-96">
+        <h2 class="text-2xl font-bold mb-4">Crea tu cuenta</h2>
+        <input type="text" id="inputNombre" placeholder="Nombre" class="w-full mb-2 p-2 border rounded">
+        <input type="email" id="inputCorreo" placeholder="Correo" class="w-full mb-2 p-2 border rounded">
+        <button id="btnCrearCuenta" class="bg-green-600 text-white px-4 py-2 rounded-lg w-full mb-2 hover:bg-green-700 transition-colors">Crear Cuenta</button>
+        <button id="cerrarModal" class="bg-blue-600 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-700 transition-colors">Cerrar</button>
+    </div>
+</div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
